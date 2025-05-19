@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  /* Center the content horizontally */
+  justify-content: center;
+  /* Center the content vertically */
+  background-color: #f05154;
+  /* Set the background color to red */
+  padding: 10px;
+  /* Add some padding around the header */
+  color: white;
+  /* Set the text color to white for contrast */
+
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 45px;
+  /* Set the width of the logo */
+  height: auto;
+  /* Maintain the aspect ratio */
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  /* Set the font size of the text */
+  font-weight: bold;
+  /* Make the text bold */
+}
+
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.entry {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.entry:hover {
+  transform: translateY(-5px);
+}
+
+.entry img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 15px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.location img {
+  width: 14px;
+  height: 19px;
+}
+
+.location a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.location a:hover {
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Ensure the entries container and add button are properly aligned */
+.entries-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  /* Space between entries and the Add button */
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* Center the container */
+}
+
+
+/* Style the form for adding new entries */
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* Space between input fields */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  /* Center the form */
+}
+
+.entry-form input,
+.entry-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.entry-form textarea {
+  resize: none;
+  /* Prevent resizing */
+  height: 100px;
+  /* Set a fixed height for the textarea */
+}
+
+.entry-form-buttons {
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.delete-button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.delete-button:hover {
+  transition: all .3s ease-in-out;
+
+  scale: 1.05;
+}
+
+/* cancel btn styling */
+.cancel-button {
+  width: fit-content;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.entry-form .cancel-button:hover {
+  background-color: #c62828;
+}
+
+/* confirm btn styling */
+.entry-form .confirm-button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.entry-form button:hover {
+  background-color: #45a049;
+}
+
+.entry-form button:active {
+  background-color: #3e8e41;
+}
+
+.add-button {
+  background-color: #5ab9ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.add-button:hover {
+  background-color: #e04850;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.add-button:active {
+  background-color: #c13c3f;
+  transform: scale(0.98);
+}
